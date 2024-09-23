@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepon 🔥💧🌱</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/mokepon.js" defer></script>
+</head>
+<body>
+    <h1>Mokepon 🔥💧🌱</h1>
+
+    <!-- Sección de selección de mascota -->
+    <section id="seleccionar-mascotas">
+        <h2>Elige tu mascota</h2>
+
+        <!-- Fila 1 -->
+        <div class="fila">
+            <input type="radio" name="mascota" id="hipodoge" value="hipodoge">
+            <label for="hipodoge">Hipodoge 🐕</label>
+
+            <input type="radio" name="mascota" id="capipepo" value="capipepo">
+            <label for="capipepo">Capipepo 🐼</label>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="fila">
+            <input type="radio" name="mascota" id="ratigueya" value="ratigueya">
+            <label for="ratigueya">Ratigueya 🐭</label>
+
+            <input type="radio" name="mascota" id="langostelvis" value="langostelvis">
+            <label for="langostelvis">Langostelvis 🦞</label>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="fila">
+            <input type="radio" name="mascota" id="tucapalma" value="tucapalma">
+            <label for="tucapalma">Tucapalma 🦜</label>
+
+            <input type="radio" name="mascota" id="pydos" value="pydos">
+            <label for="pydos">Pydos 🦎</label>
+        </div>
+
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <!-- Sección de batalla -->
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque</h2>
+
+        <div class="vidas">
+            <div id="jugador">
+                <p>Jugador</p>
+                <span id="mascota-seleccionada">Hipodoge</span>
+                <span>Vidas: <span id="vidas-jugador">3</span></span>
+            </div>
+            <div id="enemigo">
+                <p>Enemigo</p>
+                <span id="enemigo-seleccionado">Tucapalma</span>
+                <span>Vidas: <span id="vidas-enemigo">3</span></span>
+            </div>
+        </div>
+
+        <div class="botones-ataque">
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua 💧</button>
+            <button id="boton-planta">Planta 🌱</button>
+        </div>
+    </section>
+
+    <!-- Sección de mensajes -->
+    <section id="mensajes">
+        <h3>Mensajes</h3>
+        <p id="resultado-ronda"></p>
+    </section>
+
+    <!-- Sección de historial -->
+<section id="historial">
+    <h3 id="historial-titulo">Historial de Rondas</h3>
+    <div id="contenido-historial">
+        <!-- Aquí se irán agregando los mensajes de las rondas -->
+    </div>
+</section>
+
+    <!-- Botón de reinicio -->
+    <section id="reiniciar">
+        <button id="boton-reiniciar">Reiniciar</button>
+    </section>
+</body>
+</html>

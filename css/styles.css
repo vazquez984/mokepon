@@ -1,0 +1,265 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilo para la selección de mascotas */
+#seleccionar-mascotas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ocultar el elemento radio */
+input[type="radio"] {
+    display: none;
+}
+
+/* Cambiar el estilo de la etiqueta cuando el radio está seleccionado */
+input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+}
+
+#seleccionar-mascotas label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#seleccionar-mascotas label:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#seleccionar-mascotas .fila {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo específico para la sección de ataque */
+#seleccionar-ataque .vidas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+#seleccionar-ataque #jugador, #seleccionar-ataque #enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#seleccionar-ataque #jugador span, #seleccionar-ataque #enemigo span {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+#seleccionar-ataque .botones-ataque {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#seleccionar-ataque button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#seleccionar-ataque button:hover {
+    background-color: #0056b3;
+}
+
+#mensajes {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: white;
+    margin-top: 20px;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+#reiniciar {
+    margin-top: 30px;
+}
+
+#reiniciar button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff004f;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#reiniciar button:hover {
+    background-color: #e6003e;
+}
+
+/* Estilos para la sección de historial */
+#historial {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin-top: 20px;
+    border: 2px solid #007bff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+#historial-titulo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contenido-historial {
+    margin-top: 10px;
+    display: none;
+}
+
+#contenido-historial p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    #seleccionar-ataque .vidas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #seleccionar-ataque #jugador, #seleccionar-ataque #enemigo {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #seleccionar-ataque .botones-ataque {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    #seleccionar-ataque button {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    #reiniciar button {
+        width: 80%;
+    }
+
+    /* Estilo para el historial en móviles */
+    #contenido-historial {
+        font-size: 1rem;
+    }
+
+    #historial-titulo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    #seleccionar-ataque #jugador span, #seleccionar-ataque #enemigo span {
+        font-size: 1.1rem;
+    }
+
+    #seleccionar-ataque #boton-fuego, #seleccionar-ataque #boton-agua, #seleccionar-ataque #boton-planta {
+        width: 90%;
+    }
+
+    #reiniciar button {
+        width: 90%;
+        padding: 10px;
+    }
+
+    /* Historial mobile-friendly */
+    #contenido-historial {
+        font-size: 0.9rem;
+    }
+
+    #historial-titulo {
+        font-size: 1rem;
+    }
+}
